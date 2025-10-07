@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pendaftaran Klinik Kampus - UNIPDU</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, main, footer {
+      background-color: white;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 960px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    header {
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+    }
+
+    nav {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 8px;
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    table.form-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.form-table td {
+      padding: 8px;
+      vertical-align: middle;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"], input[type="password"],
+    input[type="email"], input[type="url"],
+    select, textarea {
+      width: 96%;
+      padding: 6px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 90px;
+      resize: vertical;
+    }
+
+    .controls { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+    .submit-row { text-align: left; padding-top: 10px; }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    input[type="submit"]:hover { background-color: #0056b3; }
+
+    table.jadwal {
+      width: 60%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+
+    table.jadwal th, table.jadwal td {
+      border: 1px solid #ccc;
+      text-align: center;
+      padding: 6px;
+    }
+
+    ul { margin-top: 8px; }
+
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      table.jadwal, table.form-table { width: 100%; }
+      input[type="text"], input[type="password"], input[type="email"], input[type="url"], select, textarea {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pendaftaran Klinik Kampus - UNIPDU</h1>
+  </header>
+
+  <nav aria-label="navigasi utama">
+    <a href="#form">Formulir</a> |
+    <a href="#jadwal">Jadwal</a> |
+    <a href="#langkah">Langkah</a>
+  </nav>
+
+  <main>
+    <section id="form-section">
+      <article id="form">
+        <h2>FORMULIR SURVEY DASAR</h2>
+        <form method="post" action="#" novalidate>
+          <table class="form-table" role="presentation">
+            <tr>
+              <td><label for="nama">Nama Lengkap:</label></td>
+              <td><input id="nama" name="nama" type="text" required autofocus></td>
+            </tr>
+
+            <tr>
+              <td><label for="password">Password:</label></td>
+              <td><input id="password" name="password" type="password" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input id="email" name="email" type="email" placeholder="nama@contoh.com" required></td>
+            </tr>
+
+            <tr>
+              <td><label for="website">Website / Blog:</label></td>
+              <td><input id="website" name="website" type="url" placeholder="https://alamatwebsite.com"></td>
+            </tr>
+
+            <tr>
+              <td><label>Jenis Kelamin:</label></td>
+              <td class="controls">
+                <input id="jk-l" type="radio" name="jk" value="Laki-laki"><label for="jk-l">Laki-laki</label>
+                <input id="jk-p" type="radio" name="jk" value="Perempuan"><label for="jk-p">Perempuan</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label>Hobi (Pilih 3):</label></td>
+              <td class="controls">
+                <input id="hobi1" type="checkbox" name="hobi[]" value="Membaca"><label for="hobi1">Membaca</label>
+                <input id="hobi2" type="checkbox" name="hobi[]" value="Olahraga"><label for="hobi2">Olahraga</label>
+                <input id="hobi3" type="checkbox" name="hobi[]" value="Coding"><label for="hobi3">Coding</label>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="kota">Asal Kota:</label></td>
+              <td>
+                <select id="kota" name="kota">
+                  <option value="Jombang">Jombang</option>
+                  <option value="Surabaya">Surabaya</option>
+                  <option value="Bandung">Bandung</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="tanggal">Tanggal Janji Temu:</label></td>
+              <td><input id="tanggal" name="tanggal" type="date"></td>
+            </tr>
+
+            <tr>
+              <td><label for="jarak">Jarak Rumah ke Kampus (km):</label></td>
+              <td>
+                <input id="jarak" name="jarak" type="range" min="0" max="50" step="5" value="10"
+                       oninput="document.getElementById('jarakVal').value=this.value">
+                <output id="jarakVal">10</output> km
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="warna">Warna Kesukaan:</label></td>
+              <td><input id="warna" name="warna" type="color" value="#007bff"></td>
+            </tr>
+
+            <tr>
+              <td><label for="komentar">Komentar:</label></td>
+              <td><textarea id="komentar" name="komentar" placeholder="Tuliskan komentar atau kebutuhan khusus..."></textarea></td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td class="submit-row"><input type="submit" value="KIRIM DATA (POST)"></td>
+            </tr>
+          </table>
+        </form>
+      </article>
+    </section>
+
+    <section id="jadwal">
+      <article>
+        <h3>Jadwal Dokter</h3>
+        <table class="jadwal" aria-describedby="jadwal-info">
+          <thead>
+            <tr><th>Hari</th><th>Jam Praktik</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Senin</td><td>08:00 - 12:00</td></tr>
+            <tr><td>Rabu</td><td>13:00 - 17:00</td></tr>
+            <tr><td>Jumat</td><td>09:00 - 11:00</td></tr>
+          </tbody>
+        </table>
+        <p id="jadwal-info" style="font-size:13px;color:#666;margin-top:6px;">Tabel jadwal menggunakan CSS untuk garis dan layout (tanpa atribut border).</p>
+      </article>
+    </section>
+
+    <section id="langkah">
+      <article>
+        <h3>Langkah Pendaftaran</h3>
+        <ul>
+          <li>Isi formulir dengan lengkap.</li>
+          <li>Klik tombol "KIRIM DATA (POST)".</li>
+          <li>Tunggu konfirmasi email.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Klinik Kampus UNIPDU. Semua Hak Dilindungi.
+  </footer>
+
+</body>
+</html>
