@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Pertama Saya</title>
+
+  <!-- 🌐 External CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 🧠 Internal CSS -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #cce0ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #0066cc, #66b3ff);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      background-color: white;
+      border: 2px solid #0066cc;
+      border-radius: 8px;
+      width: 60%;
+      margin: 10px auto;
+      padding: 8px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0066cc;
+      color: white;
+    }
+
+    section {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      border: 2px solid #0066cc;
+      background-color: #f9f9f9;
+      margin: 0 100px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .content, .sidebar {
+      border: 1px solid #999;
+      padding: 10px;
+      height: 180px;
+      border-radius: 6px;
+      margin: 10px;
+      background-color: white;
+    }
+
+    .content {
+      width: 70%;
+    }
+
+    .sidebar {
+      width: 30%;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      background-color: #e6f0ff;
+      padding: 10px;
+      border-top: 2px solid #0066cc;
+      margin: 20px 100px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    WEBSITE PERTAMA SAYA
+  </header>
+
+  <nav>
+    <!-- 🟡 Inline CSS (warna merah hanya untuk Home) -->
+    <a href="#" style="color:red;">Home</a>
+    <a href="#">Berita</a>
+    <a href="#">Tentang Kami</a>
+  </nav>
+
+  <section>
+    <img src="https://img.freepik.com/free-vector/farm-landscape-with-barn-tractor_1308-31068.jpg" 
+         alt="Pemandangan" 
+         width="600" height="150"
+         style="border: 3px solid #0066cc; border-radius: 8px;"> <!-- 🟡 Inline CSS -->
+  </section>
+
+  <main>
+    <div class="content">Content</div>
+    <div class="sidebar">Sidebar</div>
+  </main>
+
+  <footer>
+    Copyright © By Nama, Ahmad Farhan | NIM. 12345678910
+  </footer>
+
+</body>
+</html>
